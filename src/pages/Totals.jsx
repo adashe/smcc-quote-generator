@@ -43,10 +43,11 @@ function Totals() {
     // Calculate total price of all non variable parts
     let nonVariablePartsPrice = calcKitPrice(`${options.size}`) || 0;
 
-    // Calculate total price of all non variables including shipping and labor
+    // Calculate total price of all non variables including shipping, labor, spare and shipped loose
     let nonVariablePrice =
         calcKitPrice(`${options.size}`) +
-            calcKitPrice(`${options.size}LaborShip`) || 0;
+            calcKitPrice(`${options.size}LaborShip`) +
+            spareShippedLoosePrice || 0;
 
     // Retrieve STC
     const selectedStc = partsData.filter((part) => part.id === options.stc)[0];
@@ -108,21 +109,6 @@ function Totals() {
                     </div>
                     <div>
                         {selectedStc?.price.toLocaleString("en-US", {
-                            style: "currency",
-                            currency: "USD",
-                        }) ||
-                            (0).toLocaleString("en-US", {
-                                style: "currency",
-                                currency: "USD",
-                            })}
-                    </div>
-                </li>
-                <li>
-                    <div className={styles.totalsLabel}>
-                        Spare and Shipped Loose
-                    </div>
-                    <div>
-                        {spareShippedLoosePrice.toLocaleString("en-US", {
                             style: "currency",
                             currency: "USD",
                         }) ||
@@ -222,7 +208,24 @@ function Totals() {
                                     })}
                             </div>
                         </li>
-
+                        <li>
+                            <div className={styles.totalsLabel}>
+                                Spare and Shipped Loose
+                            </div>
+                            <div>
+                                {spareShippedLoosePrice.toLocaleString(
+                                    "en-US",
+                                    {
+                                        style: "currency",
+                                        currency: "USD",
+                                    }
+                                ) ||
+                                    (0).toLocaleString("en-US", {
+                                        style: "currency",
+                                        currency: "USD",
+                                    })}
+                            </div>
+                        </li>
                         <li>
                             <div className={styles.totalsLabel}>Parts</div>
                             <div>
