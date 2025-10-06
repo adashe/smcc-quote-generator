@@ -99,7 +99,7 @@ export function XlsxButton() {
             /* create workbook and append worksheet */
             const wb = utils.book_new();
             utils.book_append_sheet(wb, cws, "Assembly");
-            utils.book_append_sheet(wb, ws, `${jobNum} Prophet21 BoM Input`);
+            utils.book_append_sheet(wb, ws, `Components`);
 
             /* export to XLSX */
             writeFile(wb, `${jobNum} Prophet21 BoM Input.xlsx`);
