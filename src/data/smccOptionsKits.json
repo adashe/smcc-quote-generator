@@ -2,13 +2,7 @@
     {
         "id": "small",
         "description": "Non Variable Parts - Small",
-        "parts": [
-            { "labor-small": 1 },
-            { "labor-install": 1 },
-            { "consumables-small": 1 },
-            { "consumables-misc": 1 },
-            { "freight": 1 }
-        ],
+        "parts": [],
         "price": 1,
         "fla": null
     },
@@ -16,11 +10,6 @@
         "id": "medium",
         "description": "Non Variable Parts - Medium",
         "parts": [
-            { "labor-medium": 1 },
-            { "labor-install": 1 },
-            { "consumables-medium": 1 },
-            { "consumables-misc": 1 },
-            { "freight": 1 },
             { "01245": 2 },
             { "01358": 4 },
             { "01508": 4 },
@@ -122,11 +111,6 @@
         "id": "large",
         "description": "Non Variable Parts - Large",
         "parts": [
-            { "labor-large": 1 },
-            { "labor-install": 1 },
-            { "consumables-large": 1 },
-            { "consumables-misc": 1 },
-            { "freight": 1 },
             { "01245": 2 },
             { "01358": 4 },
             { "01508": 4 },
@@ -231,6 +215,52 @@
     {
         "id": "xlarge",
         "description": "Non Variable Parts - Extra Large",
+        "parts": [],
+        "price": 1,
+        "fla": null
+    },
+    {
+        "id": "smallLaborShip",
+        "description": "Labor and Shipping - Small",
+        "parts": [
+            { "labor-small": 1 },
+            { "labor-install": 1 },
+            { "consumables-small": 1 },
+            { "consumables-misc": 1 },
+            { "freight": 1 }
+        ],
+        "price": 1,
+        "fla": null
+    },
+    {
+        "id": "mediumLaborShip",
+        "description": "Labor and Shipping - Medium",
+        "parts": [
+            { "labor-medium": 1 },
+            { "labor-install": 1 },
+            { "consumables-medium": 1 },
+            { "consumables-misc": 1 },
+            { "freight": 1 }
+        ],
+        "price": 1,
+        "fla": null
+    },
+    {
+        "id": "largeLaborShip",
+        "description": "Labor and Shipping - Large",
+        "parts": [
+            { "labor-large": 1 },
+            { "labor-install": 1 },
+            { "consumables-large": 1 },
+            { "consumables-misc": 1 },
+            { "freight": 1 }
+        ],
+        "price": 1,
+        "fla": null
+    },
+    {
+        "id": "xlargeLaborShip",
+        "description": "Labor and Shipping - Extra Large",
         "parts": [
             { "labor-xlarge": 1 },
             { "labor-install": 1 },

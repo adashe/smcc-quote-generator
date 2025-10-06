@@ -41,7 +41,12 @@ function Totals() {
         : 0;
 
     // Calculate total price of all non variable parts
-    let nonVariablePrice = calcKitPrice(`${options.size}`) || 0;
+    let nonVariablePartsPrice = calcKitPrice(`${options.size}`) || 0;
+
+    // Calculate total price of all non variables including shipping and labor
+    let nonVariablePrice =
+        calcKitPrice(`${options.size}`) +
+            calcKitPrice(`${options.size}LaborShip`) || 0;
 
     // Retrieve STC
     const selectedStc = partsData.filter((part) => part.id === options.stc)[0];
@@ -221,16 +226,13 @@ function Totals() {
                         <li>
                             <div className={styles.totalsLabel}>Parts</div>
                             <div>
-                                {(
-                                    nonVariablePrice -
-                                        installLabor?.price -
-                                        selectedSizeLabor?.price -
-                                        freight?.price -
-                                        totalConsumables || 0
-                                ).toLocaleString("en-US", {
-                                    style: "currency",
-                                    currency: "USD",
-                                }) ||
+                                {(nonVariablePartsPrice || 0).toLocaleString(
+                                    "en-US",
+                                    {
+                                        style: "currency",
+                                        currency: "USD",
+                                    }
+                                ) ||
                                     (0).toLocaleString("en-US", {
                                         style: "currency",
                                         currency: "USD",

@@ -35,9 +35,22 @@ export function XlsxButton() {
             }
 
             // Add parts from the baseAssembly object with the parts numbers and their quantities
+
+            // Exclusion array of non-P21 parts
+            const excludeArr = [
+                "smallLaborShip",
+                "mediumLaborShip",
+                "largeLaborShip",
+                "xlargeLaborShip",
+            ];
+
             for (const k in baseAssembly) {
                 if (baseAssembly[k] > 0) {
-                    const arr = optionsData.filter((kit) => kit.id === k);
+                    const arr = optionsData.filter(
+                        (kit) =>
+                            kit.id === k &&
+                            excludeArr.includes(kit.id) === false
+                    );
                     const kit = arr[0];
                     kit?.parts.forEach((part) => {
                         const partID = Object.keys(part)[0];

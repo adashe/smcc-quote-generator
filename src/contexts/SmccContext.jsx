@@ -84,14 +84,20 @@ function SmccProvider({ children }) {
 
         // setAssembly with size and stc kits, resetting mutually exclusive options to 0
         if (name === "size") {
+            const laborShipId = `${value}LaborShip`;
             setBaseAssembly((previous) => ({
                 ...previous,
                 ["small"]: 0,
                 ["medium"]: 0,
                 ["large"]: 0,
                 ["xlarge"]: 0,
+                ["smallLaborShip"]: 0,
+                ["mediumLaborShip"]: 0,
+                ["largeLaborShip"]: 0,
+                ["xlargeLaborShip"]: 0,
                 ["spareShippedLoose"]: 1,
                 [value]: 1,
+                [laborShipId]: 1,
             }));
         } else if (name === "stc") {
             setBaseAssembly((previous) => ({
