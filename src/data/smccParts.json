@@ -1299,7 +1299,7 @@
         "id": "STC-32",
         "description": "STC with 32 functions",
         "manufacturer": "Sun Coast",
-        "price": 11067.24,
+        "price": 11350.0,
         "mm": 0,
         "category": "misc"
     },
@@ -1307,7 +1307,7 @@
         "id": "STC-48",
         "description": "STC with 48 functions",
         "manufacturer": "Sun Coast",
-        "price": 11567.24,
+        "price": 12035.0,
         "mm": 0,
         "category": "misc"
     },
@@ -1315,7 +1315,7 @@
         "id": "STC-64",
         "description": "STC with 64 functions",
         "manufacturer": "Sun Coast",
-        "price": 12067.24,
+        "price": 12720.0,
         "mm": 0,
         "category": "misc"
     },
@@ -1323,7 +1323,7 @@
         "id": "STC-80",
         "description": "STC with 80 functions",
         "manufacturer": "Sun Coast",
-        "price": 12567.24,
+        "price": 13392.0,
         "mm": 0,
         "category": "misc"
     },
@@ -1331,7 +1331,7 @@
         "id": "STC-96",
         "description": "STC with 96 functions",
         "manufacturer": "Sun Coast",
-        "price": 13067.24,
+        "price": 14090.0,
         "mm": 0,
         "category": "misc"
     },
@@ -1339,7 +1339,7 @@
         "id": "STC-112",
         "description": "STC with 112 functions",
         "manufacturer": "Sun Coast",
-        "price": 13567.24,
+        "price": 14775.0,
         "mm": 0,
         "category": "misc"
     },
