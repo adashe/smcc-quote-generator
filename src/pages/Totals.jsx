@@ -49,6 +49,9 @@ function Totals() {
             calcKitPrice(`${options.size}LaborShip`) +
             spareShippedLoosePrice || 0;
 
+    // Calculate total price of SMCC including all variable and non variable options
+    const smccPrice = nonVariablePrice + assemblyPrice;
+
     // Retrieve STC
     const selectedStc = partsData.filter((part) => part.id === options.stc)[0];
 
@@ -94,17 +97,6 @@ function Totals() {
             <ul className={styles.totalsUl}>
                 <li>
                     <div className={styles.totalsLabel}>
-                        Variable Parts (SMCC)
-                    </div>
-                    <div>
-                        {assemblyPrice?.toLocaleString("en-US", {
-                            style: "currency",
-                            currency: "USD",
-                        })}
-                    </div>
-                </li>
-                <li>
-                    <div className={styles.totalsLabel}>
                         {options.stc || "STC"}
                     </div>
                     <div>
@@ -121,7 +113,7 @@ function Totals() {
 
                 <li onClick={handleOpen} className={styles.clickable}>
                     <div className={styles.totalsLabel}>
-                        Non Variable Parts{" "}
+                        SMCC{" "}
                         {isOpen ? (
                             <span className={styles.materialSymbolsOutlined}>
                                 keyboard_arrow_up
@@ -134,7 +126,7 @@ function Totals() {
                     </div>
 
                     <div>
-                        {nonVariablePrice.toLocaleString("en-US", {
+                        {smccPrice.toLocaleString("en-US", {
                             style: "currency",
                             currency: "USD",
                         }) ||
@@ -149,7 +141,8 @@ function Totals() {
                     <ul className={styles.totalsSubUl}>
                         <li>
                             <div className={styles.totalsLabel}>
-                                {selectedSizeLabor.description}
+                                {selectedSizeLabor?.description ||
+                                    "Labor - Build"}
                             </div>
                             <div>
                                 {selectedSizeLabor?.price.toLocaleString(
@@ -227,7 +220,9 @@ function Totals() {
                             </div>
                         </li>
                         <li>
-                            <div className={styles.totalsLabel}>Parts</div>
+                            <div className={styles.totalsLabel}>
+                                Non Variable Parts
+                            </div>
                             <div>
                                 {(nonVariablePartsPrice || 0).toLocaleString(
                                     "en-US",
@@ -236,6 +231,21 @@ function Totals() {
                                         currency: "USD",
                                     }
                                 ) ||
+                                    (0).toLocaleString("en-US", {
+                                        style: "currency",
+                                        currency: "USD",
+                                    })}
+                            </div>
+                        </li>
+                        <li>
+                            <div className={styles.totalsLabel}>
+                                Variable Parts
+                            </div>
+                            <div>
+                                {(assemblyPrice || 0).toLocaleString("en-US", {
+                                    style: "currency",
+                                    currency: "USD",
+                                }) ||
                                     (0).toLocaleString("en-US", {
                                         style: "currency",
                                         currency: "USD",

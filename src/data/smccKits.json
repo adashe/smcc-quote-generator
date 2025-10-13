@@ -271,5 +271,47 @@
         ],
         "price": 1,
         "fla": null
+    },
+    {
+        "id": "startStopTunnel",
+        "description": "Start-Stop Tunnel",
+        "parts": [{ "20-1025": 1 }],
+        "price": 1,
+        "fla": null
+    },
+    {
+        "id": "startStopVacsPrep",
+        "description": "Start-Stop Vacs/Prep Gun",
+        "parts": [{ "20-1024": 1 }],
+        "price": 1,
+        "fla": null
+    },
+    {
+        "id": "eStopForTunnel",
+        "description": "E-Stop for Tunnel",
+        "parts": [{ "20-1026": 1 }],
+        "price": 1,
+        "fla": null
+    },
+    {
+        "id": "eStopWithLight",
+        "description": "E-Stop with Light",
+        "parts": [{ "20-1028": 1 }],
+        "price": 1,
+        "fla": null
+    },
+    {
+        "id": "horn",
+        "description": "Horn",
+        "parts": [{ "horn": 1 }],
+        "price": 1,
+        "fla": null
+    },
+    {
+        "id": "plugAndPlay",
+        "description": "Plug & Play",
+        "parts": [{ "CKF-12-12-3": 1 }],
+        "price": 1,
+        "fla": null
     }
 ]

@@ -1192,14 +1192,6 @@
         "category": "cable"
     },
     {
-        "id": "CKF-12-12-3",
-        "description": "Cable, Turck, CKF-12-12-3 Plug 12-pin",
-        "manufacturer": "Turck/Allied",
-        "price": 72.61,
-        "mm": 0,
-        "category": "cable"
-    },
-    {
         "id": "OMNI - SCWL05C02",
         "description": "5FT. 2 Connectors 1x1",
         "manufacturer": "Omni Cables",
@@ -1574,5 +1566,53 @@
         "price": 500.0,
         "mm": 0,
         "category": "labor"
+    },
+    {
+        "id": "20-1025",
+        "description": "Push-Pull E-Stop Station N4X",
+        "manufacturer": "Sun Coast",
+        "price": 185.0,
+        "mm": 0,
+        "category": "startStopStation"
+    },
+    {
+        "id": "20-1024",
+        "description": "Start-Stop Station 30MM N4X",
+        "manufacturer": "Sun Coast",
+        "price": 185.0,
+        "mm": 0,
+        "category": "startStopStation"
+    },
+    {
+        "id": "20-1026",
+        "description": "Push-Pull E-Stop Station N4X",
+        "manufacturer": "Sun Coast",
+        "price": 130.0,
+        "mm": 0,
+        "category": "startStopStation"
+    },
+    {
+        "id": "20-1028",
+        "description": "E-Stop With Light",
+        "manufacturer": "Sun Coast",
+        "price": 175.0,
+        "mm": 0,
+        "category": "startStopStation"
+    },
+    {
+        "id": "horn",
+        "description": "Horn 120V Red",
+        "manufacturer": "Sun Coast",
+        "price": 125.0,
+        "mm": 0,
+        "category": "startStopStation"
+    },
+    {
+        "id": "CKF-12-12-3",
+        "description": "Plug & Play, Female Conn 12-pin",
+        "manufacturer": "TURCK",
+        "price": 115.0,
+        "mm": 0,
+        "category": "startStopStation"
     }
 ]

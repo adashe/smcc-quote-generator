@@ -16,10 +16,33 @@ function PartSummary() {
     // Build a parts list from the assembly object with the parts numbers and their quantities
     let partsList = {};
 
+    // Exclusion array of non-P21 compatible kits
+    const p21ExcludeKitsArr = [
+        "startStopTunnel",
+        "startStopVacsPrep",
+        "eStopForTunnel",
+        "eStopWithLight",
+        "horn",
+        "STC-32",
+        "STC-48",
+        "STC-64",
+        "STC-80",
+        "STC-96",
+        "STC-112",
+        "STC-128",
+        "smallLaborShip",
+        "mediumLaborShip",
+        "largeLaborShip",
+        "xlargeLaborShip",
+    ];
+
     // Build a parts list from the assembly object with the parts numbers and their quantities
     for (const k in assembly) {
         if (assembly[k] > 0) {
-            const arr = kitsData.filter((kit) => kit.id === k);
+            const arr = kitsData.filter(
+                (kit) =>
+                    kit.id === k && p21ExcludeKitsArr.includes(kit.id) === false
+            );
             const kit = arr[0];
             kit?.parts.forEach((part) => {
                 const partID = Object.keys(part)[0];
@@ -34,7 +57,10 @@ function PartSummary() {
     // Add parts from the baseAssembly object with the parts numbers and their quantities
     for (const k in baseAssembly) {
         if (baseAssembly[k] > 0) {
-            const arr = optionsData.filter((kit) => kit.id === k);
+            const arr = optionsData.filter(
+                (kit) =>
+                    kit.id === k && p21ExcludeKitsArr.includes(kit.id) === false
+            );
             const kit = arr[0];
             kit?.parts.forEach((part) => {
                 const partID = Object.keys(part)[0];

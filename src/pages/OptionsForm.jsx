@@ -3,6 +3,7 @@ import { useSmcc } from "../contexts/SmccContext";
 import PageNarrow from "../components/PageNarrow";
 import TabNavigation from "../components/TabNavigation";
 import LinkButton from "../components/buttons/LinkButton";
+import { KitRow } from "./AssemblyForm/KitRow";
 
 function OptionsForm() {
     const { options, handleChangeOptions } = useSmcc();
