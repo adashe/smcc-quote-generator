@@ -60,10 +60,11 @@ function Totals() {
         (part) => part.id === `labor-${options.size}`
     )[0];
 
-    // Retrieve install labor "part"
-    const installLabor = partsData.filter(
-        (part) => part.id === "labor-install"
-    )[0];
+    // Retrieve install labor "part"; only include if size has been selected
+    const installLabor =
+        selectedSizeLabor > 0
+            ? partsData.filter((part) => part.id === "labor-install")[0]
+            : 0;
 
     // Retrieve freight "part"
     const freight = options.size
